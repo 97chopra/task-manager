@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 
 // Protected route - redirects to login if not logged in
 function ProtectedRoute({ children }) {
@@ -21,7 +22,7 @@ function App() {
             path="/dashboard"
             element={
               <ProtectedRoute>
-                <h1>Dashboard - Coming Soon!</h1>
+                <Dashboard />
               </ProtectedRoute>
             }
           />
